@@ -21,13 +21,15 @@ public class MouseInteraction : MonoBehaviour
     {
         if(ui!=null)
         ui.Setalpha(1.0f);
-        outline.OutlineWidth = 10;
+        if (outline != null)
+            outline.OutlineWidth = 10;
     }
 
     void OnMouseExit()
     {
         if (ui != null)
             ui.Setalpha(0.2f);
-        outline.OutlineWidth = 0;
+        if (outline != null)
+            outline.OutlineWidth = 0;
     }
 }

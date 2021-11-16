@@ -49,18 +49,19 @@ public class WaypointController : MonoBehaviour {
         }
 
     }
+    public void SwitchMoving()
+    {
+        isMoving = !isMoving;
+        audioSource.Play();
+        if (isMoving)
+            smoke.Play(true);
+        else
+            smoke.Stop(true, ParticleSystemStopBehavior.StopEmitting);
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(0))
-        {
-            isMoving = !isMoving;
-            audioSource.Play();
-            if (isMoving)
-                smoke.Play(true);
-            else
-                smoke.Stop(true, ParticleSystemStopBehavior.StopEmitting);
-        }
+      
           
         if (isMoving == true)
         {

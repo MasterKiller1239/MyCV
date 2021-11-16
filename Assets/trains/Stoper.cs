@@ -15,13 +15,14 @@ public class Stoper : MonoBehaviour
     public int EN = 0;
     public int FR = 0;
     public int Achievements = 0;
-    public spriteSwitcher[] sprites; 
-      
+    public spriteSwitcher[] sprites;
+    public GameObject canvas;
 
     void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Train" && wasUsed!=true)
         {
+            canvas.GetComponent<HudSwitch>().EnableUI();
             collision.gameObject.GetComponent<WaypointController>().isMoving = false;
             wasUsed = true;
             gameCon.CplusUpdate(Cplus);

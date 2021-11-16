@@ -19,6 +19,7 @@ public class MouseInter : MonoBehaviour
     }
     void OnMouseOver()
     {
+        if(ui!=null)
         ui.Unlocker();
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class HudSwitch : MonoBehaviour
 {
     public GameObject[] ui;
- 
+    bool active = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +35,13 @@ public class HudSwitch : MonoBehaviour
     }
     public void DisableUI()
     {
+        active = !active;
         foreach (GameObject window in ui)
         {
+            if(active)
             window.SetActive(false);
+            else
+            window.SetActive(true);
         }
 
     }
