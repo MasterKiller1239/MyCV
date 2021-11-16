@@ -131,7 +131,7 @@ public class WaypointController : MonoBehaviour {
     {
         if(targetWaypointIndex > lastWaypointIndex)
         {
-            targetWaypointIndex = 0;
+           // targetWaypointIndex = waypoints.FindLast();
             isMoving = !isMoving;
         }
 
@@ -141,7 +141,7 @@ public class WaypointController : MonoBehaviour {
     {
         if (PositionsHistory[index] > lastWaypointIndex)
         {
-            PositionsHistory[index] = 0;
+           // PositionsHistory[index] = 0;
             isMoving = !isMoving;
         }
 
