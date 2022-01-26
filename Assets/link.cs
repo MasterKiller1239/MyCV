@@ -17,7 +17,7 @@ public class link : MonoBehaviour
         
     }
 
-    void OnMouseOver()
+    void OnMouseDown()
     {
         if(used==false)
             Application.OpenURL("http://www.linkedin.com/in/jakub-grobelkiewicz-7bb3971b3/");

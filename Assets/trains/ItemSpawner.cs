@@ -69,6 +69,7 @@ public class ItemSpawner : MonoBehaviour
 
         for(int i=0;i<number;i++)
         {
+
             spawnPoint = this.transform.position;
             if (Zswitch == false)
                 spawnPoint.y += Gap * BodyParts.Count;
